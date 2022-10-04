@@ -15,26 +15,39 @@ int main() {
     std::cin >>prijmeni;
 
     std::cout << "Prijmeni je: " << prijmeni << "\n";
-int vzdelani;
-    std::cout <<"Zadej vzdelani (zs = 1, ss = 2, vs == 3): ";
 
 
-    //enum vzdelani {zs, ss, vs};
+    std::cout <<"Zadej vzdelani (zs, ss, vs): ";
+    std::string vzdelani;
+    std::cin >>vzdelani;
+    std::cout << "Vzdelani je: " << vzdelani << "\n";
 
-    //vzdelani skola = vs;
+    std::cout <<"Jak jste vysoky/a? (V cm) ";
+    std::string vyska;
+    std::cin >>vyska;
+    std::cout << "Vyska je: " << vyska << "\n";
 
-    if (vzdelani == 1){
-    std::cout << "Vzdelani je zakladni skola \n";
-    }
-    else if (vzdelani == 2){
-    std::cout << "Vzdelani je stredni skola \n";
-    }
-    else if (vzdelani == 3){
-    std::cout << "Vzdelani je vysoka skola \n";
-    }
+    std::cout <<"Kolik Vam je? ";
+    std::string vek;
+    std::cin >>vek;
+    std::cout << "Vek je: " << vek << "\n";
 
-    std::ofstream vystup("vystup.txt"); // ulozi do souboru
-    vystup << "Jmeno: " << jmeno << "\n";
+   // enum vzdelani {zs, ss, vs};
+
+ //   vzdelani; skola = vs;
+
+  //  if (skola == 1){
+  //  std::cout << "Vzdelani je zakladni skola \n";
+  //  }
+  //  else if (skola == 2){
+   // std::cout << "Vzdelani je stredni skola \n";
+   // }
+   // else if (skola == 3){
+   // std::cout << "Vzdelani je vysoka skola \n";
+   // }
+
+   // std::ofstream vystup("vystup.txt"); // ulozi do souboru
+   // vystup << "Jmeno: " << jmeno << "\n";
 
     return 0;
 }
