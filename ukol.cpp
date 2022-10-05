@@ -3,51 +3,58 @@
 #include <string>
 
 int main() {
+double vyska;
+int vek;
 
     std::cout <<"Zadej jmeno: ";
     std::string jmeno;
     std::cin >>jmeno;
 
-    std::cout << "Jmeno je: " << jmeno << "\n";
-
     std::cout <<"Zadej prijmeni: ";
     std::string prijmeni;
     std::cin >>prijmeni;
 
-    std::cout << "Prijmeni je: " << prijmeni << "\n";
+    std::cout << "Jmeno je: " << jmeno << " " << prijmeni << "\n";
 
-
+    vzdelaniznovu:
+    std::string zs;
+    std::string ss;
+    std::string vs;
     std::cout <<"Zadej vzdelani (zs, ss, vs): ";
     std::string vzdelani;
     std::cin >>vzdelani;
-    std::cout << "Vzdelani je: " << vzdelani << "\n";
 
+    if(vzdelani == "zs" || vzdelani == "ss" || vzdelani == "vs") {
+        std::cout << "Vzdelani je: " << vzdelani << "\n";
+    }
+    else {
+        std::cout << "Neplatny format, zadej znovu ""\n";
+        goto vzdelaniznovu;
+    }
+
+
+    vyskaznovu:
     std::cout <<"Jak jste vysoky/a? (V cm) ";
-    std::string vyska;
     std::cin >>vyska;
-    std::cout << "Vyska je: " << vyska << "\n";
 
+    if (vyska < 220 && vyska > 60) {
+        std::cout << "Vyska je: " << vyska << "\n";
+    }
+    else {
+        std::cout << "Vyska je nerealna ""\n";
+        goto vyskaznovu;
+    }
+    vekznovu:
     std::cout <<"Kolik Vam je? ";
-    std::string vek;
     std::cin >>vek;
-    std::cout << "Vek je: " << vek << "\n";
 
-   // enum vzdelani {zs, ss, vs};
-
- //   vzdelani; skola = vs;
-
-  //  if (skola == 1){
-  //  std::cout << "Vzdelani je zakladni skola \n";
-  //  }
-  //  else if (skola == 2){
-   // std::cout << "Vzdelani je stredni skola \n";
-   // }
-   // else if (skola == 3){
-   // std::cout << "Vzdelani je vysoka skola \n";
-   // }
-
-   // std::ofstream vystup("vystup.txt"); // ulozi do souboru
-   // vystup << "Jmeno: " << jmeno << "\n";
+    if (vek > 0 && vek < 120) {
+        std::cout << "Vek je: " << vek << "\n";
+    }
+    else {
+        std::cout << "Rekord ""\n";
+        goto vekznovu;
+    }
 
     return 0;
 }
